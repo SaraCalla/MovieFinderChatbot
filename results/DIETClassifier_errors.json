@@ -1,0 +1,792 @@
+[
+  {
+    "text": "I don't think so",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 14,
+        "end": 16,
+        "confidence_entity": 0.502149760723114,
+        "value": "so",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to order food",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 16,
+        "end": 20,
+        "confidence_entity": 0.4556262493133545,
+        "value": "food",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where can I find Dune?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "Dune",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 17,
+        "end": 21,
+        "confidence_entity": 0.888959527015686,
+        "value": "Dune",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "where can i find dune?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "dune",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 17,
+        "end": 21,
+        "confidence_entity": 0.9443008899688721,
+        "value": "dune",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who is Stephen Thorne?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 21,
+        "value": "Stephen Thorne",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 7,
+        "end": 21,
+        "confidence_entity": 0.64,
+        "value": "Stephen Thorne",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can you tell me about Scroobius Pip?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "Scroobius Pip",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 27,
+        "end": 40,
+        "confidence_entity": 0.9939661622047424,
+        "value": "Scroobius Pip",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what can you tell me about scroobius pip?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "scroobius pip",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 27,
+        "end": 40,
+        "confidence_entity": 0.9820630550384521,
+        "value": "scroobius pip",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you know about dee bradley baker?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 40,
+        "value": "dee bradley baker",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 27,
+        "end": 40,
+        "confidence_entity": 0.9808045029640198,
+        "value": "bradley baker",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me about Carol Anne Dines",
+    "entities": [
+      {
+        "start": 14,
+        "end": 30,
+        "value": "Carol Anne Dines",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 14,
+        "end": 30,
+        "confidence_entity": 0.7494812607765198,
+        "value": "Carol Anne Dines",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how is the predator rated?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 19,
+        "value": "the predator",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are you capable of?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.9297705888748169,
+        "value": "capable",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me all the actors in This Is Not a Comedy",
+    "entities": [
+      {
+        "start": 26,
+        "end": 46,
+        "value": "This Is Not a Comedy",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9833690524101257,
+        "value": "me",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 26,
+        "end": 46,
+        "confidence_entity": 0.9995170831680298,
+        "value": "This Is Not a Comedy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "who is matt bellefleur?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 22,
+        "value": "matt bellefleur",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 12,
+        "end": 22,
+        "confidence_entity": 0.5291802883148193,
+        "value": "bellefleur",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you know about tiger hu chen?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 36,
+        "value": "tiger hu chen",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 29,
+        "end": 36,
+        "confidence_entity": 0.9085186719894409,
+        "value": "hu chen",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you know about cabran e. chamberlain?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 44,
+        "value": "cabran e. chamberlain",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9458168745040894,
+        "value": "cabran",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 33,
+        "end": 44,
+        "confidence_entity": 0.9884864091873169,
+        "value": "chamberlain",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about hibiku yamamura",
+    "entities": [
+      {
+        "start": 14,
+        "end": 29,
+        "value": "hibiku yamamura",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.9999103546142578,
+        "value": "yamamura",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "of course",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 3,
+        "end": 9,
+        "confidence_entity": 0.9117090106010437,
+        "value": "course",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "yes of course",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.980012059211731,
+        "value": "course",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is 2 + 2?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 8,
+        "end": 9,
+        "confidence_entity": 0.9948638081550598,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 12,
+        "end": 13,
+        "confidence_entity": 0.9903950095176697,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "thank you very much",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 10,
+        "end": 19,
+        "confidence_entity": 0.7950504422187805,
+        "value": "very much",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Find me Night Teeth",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "Night Teeth",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9510621428489685,
+        "value": "Night Teeth",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find me night teeth",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "night teeth",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.4903726577758789,
+        "value": "teeth",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you know about todd haberkorn?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 37,
+        "value": "todd haberkorn",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 28,
+        "end": 37,
+        "confidence_entity": 0.9991558790206909,
+        "value": "haberkorn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me something about rambo: last blood",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "rambo: last blood",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 31,
+        "end": 41,
+        "confidence_entity": 0.5301074385643005,
+        "value": "last blood",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what are the shanghai fortress reviews?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 30,
+        "value": "shanghai fortress",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 13,
+        "end": 30,
+        "confidence_entity": 0.6479814648628235,
+        "value": "shanghai fortress",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what are the the jack in the box reviews?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 32,
+        "value": "the jack in the box",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 17,
+        "end": 32,
+        "confidence_entity": 0.8194592595100403,
+        "value": "jack in the box",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me about James D. Weston II",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "value": "James D. Weston II",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 14,
+        "end": 21,
+        "confidence_entity": 0.85,
+        "value": "James D",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 23,
+        "end": 32,
+        "confidence_entity": 0.9883798360824585,
+        "value": "Weston II",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about james d. weston ii",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "value": "james d. weston ii",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.9976909160614014,
+        "value": "james",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 20,
+        "end": 21,
+        "confidence_entity": 0.504294216632843,
+        "value": "d",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 23,
+        "end": 32,
+        "confidence_entity": 0.67,
+        "value": "weston ii",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what are the grown ups reviews?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "grown ups",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.9892719984054565,
+        "value": "grown",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "not really",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.7162227034568787,
+        "value": "not really",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who's the US President?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 10,
+        "end": 22,
+        "confidence_entity": 0.9996978044509888,
+        "value": "US President",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me something about louis j rhone",
+    "entities": [
+      {
+        "start": 24,
+        "end": 37,
+        "value": "louis j rhone",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.9966848492622375,
+        "value": "j rhone",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about Edward Force",
+    "entities": [
+      {
+        "start": 24,
+        "end": 36,
+        "value": "Edward Force",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 24,
+        "end": 36,
+        "confidence_entity": 0.62,
+        "value": "Edward Force",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can you tell me about Lex Lang?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 35,
+        "value": "Lex Lang",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.62,
+        "value": "Lex Lang",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about melvyn rawlinson",
+    "entities": [
+      {
+        "start": 14,
+        "end": 30,
+        "value": "melvyn rawlinson",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.8313260674476624,
+        "value": "rawlinson",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about Apex",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "Apex",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 28,
+        "confidence_entity": 0.8074010610580444,
+        "value": "Apex",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me something about apex",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "apex",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 28,
+        "confidence_entity": 0.9449963569641113,
+        "value": "apex",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what are the the chronicles of narnia: the lion, the witch and the wardrobe reviews?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 75,
+        "value": "the chronicles of narnia: the lion, the witch and the wardrobe",
+        "entity": "movie"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "movie",
+        "start": 17,
+        "end": 37,
+        "confidence_entity": 0.9988073110580444,
+        "value": "chronicles of narnia",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 39,
+        "end": 47,
+        "confidence_entity": 0.9997016787528992,
+        "value": "the lion",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "movie",
+        "start": 49,
+        "end": 75,
+        "confidence_entity": 0.7058877348899841,
+        "value": "the witch and the wardrobe",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

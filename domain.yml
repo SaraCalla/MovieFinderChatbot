@@ -1,0 +1,70 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_status
+  - bot_challenge
+  - movie_provider
+  - all_stars_movie
+  - movie_director
+  - movie_writer
+  - person_info
+  - movie_plot
+  - movie_reviews
+  - out_of_scope
+  - help
+  - thanks
+
+entities:
+  - movie
+  - person
+
+slots:
+  last_question:
+    type: text
+    initial_value: ""
+    influence_conversation: true
+  movie:
+    type: text
+    initial_value: ""
+    influence_conversation: true
+
+responses:
+  utter_greet:
+    - text: "Hey! I am Movie Finder, what can I do for you today?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_movie:
+    - text: "You're welcome! Ask me something else"
+    - text: "Ah forget it! Ask me something else"
+    - text: "No problem! Ask me something else"
+
+  utter_out_of_scope:
+    - text: "Sorry, but I can't answer your request because I only deal with questions about movies. So instead, ask me something like, Where can I find Eternals?"
+
+  utter_help:
+    - text: "I am Movie Finder and I will help with your questions about movies. \nHere are some things you can ask me\n- On which movie provider you can find a certain movie.\n- The actors starring in a movie.\n- Who directed or wrote a movie.\n- What a movie is about.\n- How a film is rated.\n- Information about a person."
+
+actions:
+  - action_movie_provider
+  - action_all_stars_movie
+  - action_movie_director
+  - action_movie_writer
+  - action_movie_plot
+  - action_movie_reviews
+  - action_person_info
+#  - action_user_providers
+  - action_affirm
+  - action_deny
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

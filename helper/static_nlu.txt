@@ -1,0 +1,118 @@
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes of course
+    - yess
+    - yep
+    - yeeess
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no...
+    - nah
+    - no thanks
+    - no thank you
+    - no no
+    - Nothing
+
+- intent: bot_status
+  examples: |
+    - how are you?
+    - how are u?
+    - how r u
+    - how u feeling?
+    - how today?
+    - how's today?
+    - How are you doing?
+    - you?
+    - and you?
+    - good you?
+    - not good you?
+    - sad and you?
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - What day is today?
+    - Tell me a joke
+    - What's the weather like today?
+    - What's the weather?
+    - How's the weather today?
+
+- intent: help
+  examples: |
+    - What can you do?
+    - What are you capable of?
+    - Help
+    - Info
+    - What are you able to do?
+    - What can I ask?
+    - Need some help
+    - Tell me what you are able to do
+    - Tell me what you can do
+    - Tell me what you do
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks
+    - Okay thanks
+    - Okay cool
+    - okay thank you
+    - Oks
+    - Nice thanks
+    - thank you very much
+    - uh okay thanks
+    - great thanks

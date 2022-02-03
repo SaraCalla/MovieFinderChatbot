@@ -1,0 +1,4 @@
+JustWatch==0.5.1
+rasa==2.8.15
+requests==2.27.1
+sumy==0.9.0

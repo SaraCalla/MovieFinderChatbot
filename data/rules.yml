@@ -1,0 +1,63 @@
+version: "2.0"
+
+rules:
+
+  - rule: Return writers of a movie
+    steps:
+      - intent: movie_writer
+      - action: action_movie_writer
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Return movie providers anytime the user asks
+    steps:
+      - intent: movie_provider
+      - action: action_movie_provider
+
+  - rule: Return starring actors in a movie
+    steps:
+      - intent: all_stars_movie
+      - action: action_all_stars_movie
+
+  - rule: Return directors of a movie
+    steps:
+      - intent: movie_director
+      - action: action_movie_director
+
+  - rule: Return person information
+    steps:
+      - intent: person_info
+      - action: action_person_info
+
+  - rule: Return the movie plot
+    steps:
+      - intent: movie_plot
+      - action: action_movie_plot
+
+  - rule: Return the movie reviews
+    steps:
+      - intent: movie_reviews
+      - action: action_movie_reviews
+
+  - rule: out-of-scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - rule: Confirm user providers
+    steps:
+      - intent: user_providers
+      - action: action_user_providers
+
+  - rule: Give help
+    steps:
+      - intent: help
+      - action: action_help

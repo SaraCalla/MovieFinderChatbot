@@ -1,0 +1,402 @@
+version: "2.0"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+- intent: out_of_scope
+  examples: |
+    - Tell me a joke
+    - I want to order food
+- intent: affirm
+  examples: |
+    - yes
+    - yeeess
+- intent: help
+  examples: |
+    - Tell me what you are able to do
+    - Tell me what you do
+- intent: thanks
+  examples: |
+    - thank you very much
+    - Thank you
+- intent: goodbye
+  examples: |
+    - goodbye
+    - cee you later
+- intent: bot_status
+  examples: |
+    - how's today?
+    - How are you doing?
+- intent: greet
+  examples: |
+    - goodevening
+    - hey there
+    - moin
+- intent: deny
+  examples: |
+    - no no
+    - I don't think so
+    - no
+- intent: movie_reviews
+  examples: |
+    - what are the [willy's wonderland](movie) reviews?
+    - How is [Stuart Little](movie) rated?
+    - what are the [porn to be free](movie) reviews?
+    - Tell me how [Voyagers](movie) is reviewed
+    - How is [The King of Fighters](movie) rated?
+    - What are the reviews of [Vanguard](movie)?
+    - how is [spirit: stallion of the cimarron](movie) rated?
+    - How is [xXx: Return of Xander Cage](movie) rated?
+    - How is [Saint Seiya Heaven Chapter: Overture](movie) rated?
+    - What are the reviews of [Chernobyl: Abyss](movie)?
+    - Tell me how [Motherly](movie) is reviewed
+    - what are the reviews of [the day naruto became hokage](movie)?
+    - what are the reviews of [never back down: revolt](movie)?
+    - how is [i love you, beth cooper](movie) rated?
+    - What are the reviews of [Please Enlighten Me](movie)?
+    - what are the reviews of [vanguard](movie)?
+    - tell me how [voyagers](movie) is reviewed
+    - how is [doctor strange](movie) rated?
+    - what are the reviews of [the hangover part ii](movie)?
+    - tell me how [fifty shades of black](movie) is reviewed
+    - what are the reviews of [clash of the titans](movie)?
+    - what are the [ice age: the meltdown](movie) reviews?
+    - what are the reviews of [i want to eat your pancreas](movie)?
+    - what are the [sword art online: the movie – ordinal scale](movie) reviews?
+    - How is [Spirit: Stallion of the Cimarron](movie) rated?
+    - Tell me how [Mortal Kombat](movie) is reviewed
+    - what are the [the jack in the box](movie) reviews?
+    - How is [Escape Room: Tournament of Champions](movie) rated?
+    - What are the reviews of [I Want to Eat Your Pancreas](movie)?
+    - tell me how [limitless](movie) is reviewed
+    - tell me how [back to the outback](movie) is reviewed
+    - What are the reviews of [The Hangover Part II](movie)?
+- intent: movie_provider
+  examples: |
+    - Where can I find [The House](movie)?
+    - where can i find [mother/android](movie)?
+    - where is [kung fu panda](movie)?
+    - tell me where to find [shrek the third](movie)
+    - where is [iron man](movie)?
+    - tell me where to find [pokémon the movie: i choose you](movie)
+    - Where is [The Experiment](movie)?
+    - where can i watch [the hand of god](movie)?
+    - Where can I find [Fifty Shades of Grey](movie)?
+    - Where can I watch [Amina](movie)?
+    - Find me [The Hunger Games: Mockingjay - Part 1](movie)
+    - tell me where to find [2012](movie)
+    - Where is [Mulan](movie)?
+    - Where can I watch [Dragon Ball Z: The World's Strongest](movie)?
+    - where can i watch [thor: ragnarok](movie)?
+    - Tell me where to find [Hacksaw Ridge](movie)
+    - where can i find [sucker punch](movie)?
+    - Where can I watch [Maya the Bee: The Golden Orb](movie)?
+    - where can i find [spider-man: homecoming](movie)?
+    - Where can I watch [Sentinelle](movie)?
+    - Where can I find [Sucker Punch](movie)?
+    - Where can I watch [Home Sweet Home Alone](movie)?
+    - where is [after we collided](movie)?
+    - where can i find [zombieland](movie)?
+    - Where can I find [John and the Hole](movie)?
+    - Tell me where to find [Stuart Little](movie)
+    - Where can I find [Dawn of the Planet of the Apes](movie)?
+    - Tell me where to find [F9](movie)
+    - find me [black panther](movie)
+    - Tell me where to find [More the Merrier](movie)
+    - Find me [Black Panther](movie)
+    - Where is [After We Collided](movie)?
+    - where is [mulan](movie)?
+    - Where can I find [Dune](movie)?
+    - Tell me where to find [The Emperor's New Groove](movie)
+    - where is [roald dahl's the witches](movie)?
+    - Tell me where to find [Pokémon the Movie: I Choose You](movie)
+    - Where is [Greenland](movie)?
+    - Where can I find [Terminator Salvation](movie)?
+- intent: all_stars_movie
+  examples: |
+    - Who are the main actors of [Feels Like Euphoria](movie)?
+    - Who are the actors in [Long Story Short](movie)?
+    - Who are the actors in [We Bare Bears: The Movie](movie)?
+    - the actors in [clean](movie)?
+    - Who is starring in [The 355](movie)?
+    - the actors in [alita: battle angel](movie)?
+    - Who is starring in [Motherly](movie)?
+    - tell me all the actors in [john wick: chapter 3 - parabellum](movie)
+    - The actors in [Total Recall](movie)?
+    - tell me all the actors in [dragon ball z: bio-broly](movie)
+    - who is starring in [pokémon: mewtwo strikes back - evolution](movie)?
+    - the actors in [total recall](movie)?
+    - who are the main actors of [barbie & chelsea: the lost birthday](movie)?
+    - Who is starring in [Blade Runner 2049](movie)?
+    - Who are the main actors of [Beckett](movie)?
+    - Who are the main actors of [Barbie & Chelsea: The Lost Birthday](movie)?
+    - The actors in [Lucy](movie)?
+    - Tell me all the actors in [Kids Are Back](movie)
+    - Who are the actors in [Blitz](movie)?
+    - who is starring in [pirates of the caribbean: at world's end](movie)?
+    - who is starring in [the legend of tarzan](movie)?
+    - Who is starring in [The Legend of Tarzan](movie)?
+    - who are the main actors of [gone mom: the disappearance of jennifer dulos](movie)?
+    - The actors in [The Funeral Home](movie)?
+    - The actors in [New Gods: Nezha Reborn](movie)?
+    - the actors in [my father's violin](movie)?
+    - who are the main actors of [beckett](movie)?
+    - Who is starring in [Godmothered](movie)?
+    - Tell me all the actors in [Last Night in Soho](movie)
+    - who is starring in [hacksaw ridge](movie)?
+    - the actors in [harry potter and the chamber of secrets](movie)?
+    - who is starring in [the 355](movie)?
+    - tell me all the actors in [stand by me doraemon](movie)
+    - Who are the actors in [Flashback](movie)?
+    - Who is starring in [The Unholy](movie)?
+    - tell me all the actors in [come play with me](movie)
+    - who is starring in [the unholy](movie)?
+    - Who are the actors in [Naruto Shippuden the Movie: The Will of Fire](movie)?
+    - who is starring in [hypnotic](movie)?
+    - the actors in [untitled peaky blinders film](movie)?
+- intent: movie_plot
+  examples: |
+    - tell me the plot of [never back down: revolt](movie)
+    - what is the plot of [maleficent](movie)
+    - tell me something about [rambo: last blood](movie)
+    - tell me what the [lockout](movie) is about
+    - tell me the plot of [david and the elves](movie)
+    - what is [the courier](movie) about?
+    - Tell me something about [Taken 2](movie)
+    - what is the plot of [overcomer](movie)
+    - tell me something about [city under siege](movie)
+    - What is [Saint Seiya: Legend of Sanctuary](movie) about?
+    - Tell me the plot of [American Badger](movie)
+    - Tell me the plot of [Never Back Down: Revolt](movie)
+    - what is [ready player one](movie) about?
+    - Tell me something about [The New Mutants](movie)
+    - Tell me something about [Never Back Down: Revolt](movie)
+    - tell me something about [apex](movie)
+    - What is [The Losers](movie) about?
+    - What is the plot of [Incredibles 2](movie)
+    - Tell me the plot of [Cats & Dogs 3: Paws Unite](movie)
+    - tell me what the [exodus: gods and kings](movie) is about
+    - tell me what the [the matrix resurrections](movie) is about
+    - Tell me what the [Cars 3](movie) is about
+    - tell me the plot of [outlaws](movie)
+    - tell me what the [amina](movie) is about
+    - What is [Snoopy Presents: For Auld Lang Syne](movie) about?
+    - What is [Diary of a Wimpy Kid](movie) about?
+    - Tell me something about [Candyman](movie)
+    - What is [Caged](movie) about?
+    - what is the plot of [sex with love](movie)
+    - tell me the plot of [red notice](movie)
+    - tell me what the [wild indian](movie) is about
+    - tell me something about [101 dalmatians](movie)
+    - tell me what the [the twilight saga: breaking dawn - part 2](movie) is about
+    - tell me what the [knock knock](movie) is about
+    - What is the plot of [El refugio](movie)
+    - what is the plot of [uncharted](movie)
+    - What is the plot of [The Unforgivable](movie)
+    - tell me the plot of [cats & dogs 3: paws unite](movie)
+    - tell me something about [grown ups 2](movie)
+    - What is the plot of [Sex with Love](movie)
+- intent: movie_director
+  examples: |
+    - tell me the director of [the house](movie)
+    - Who directed [Parasite](movie)?
+    - i want to know to know who directed [jurassic world: fallen kingdom](movie)
+    - the director of [arrival](movie)
+    - I want to know to know who directed [Avatar 2](movie)
+    - The director of [Arrival](movie)
+    - Who is the director of [Transformers: Age of Extinction](movie)?
+    - who directed [hotel transylvania: transformania](movie)?
+    - The director of [The Match](movie)
+    - I want to know to know the director of [22 Jump Street](movie)
+    - Tell me the director of [Texas Chainsaw 3D](movie)
+    - who directed [body brokers](movie)?
+    - Who directed [Hotel Transylvania: Transformania](movie)?
+    - i want to know to know who directed [corpus christi](movie)
+    - Who directed [Titane](movie)?
+    - Tell me the director of [Hitman's Wife's Bodyguard](movie)
+    - i want to know to know who directed [corpse bride](movie)
+    - who directed [titane](movie)?
+    - tell me the director of [from straight a's to xxx](movie)
+    - Tell me the director of [Hummingbird](movie)
+    - Who is the director of [Toy Story 2](movie)?
+    - I want to know to know who directed [Outlaws](movie)
+    - Who directed [Limitless](movie)?
+    - The director of [Teen Titans Go! See Space Jam](movie)
+    - Tell me the director of [Sanctum](movie)
+    - The director of [The Hitman's Bodyguard](movie)
+    - who is the director of [hercules](movie)?
+    - Tell me the director of [Rurouni Kenshin: The Beginning](movie)
+    - Tell me the director of [The House](movie)
+    - I want to know to know the director of [The Matrix Resurrections](movie)
+    - Who is the director of [Hercules](movie)?
+    - the director of [saint seiya heaven chapter: overture](movie)
+    - tell me the director of [hitman's wife's bodyguard](movie)
+    - I want to know to know who directed [Insensate](movie)
+    - Who directed [Misfit #EresOTeHaces](movie)?
+    - Who directed [G.I. Joe: The Rise of Cobra](movie)?
+    - Tell me the director of [From Straight A's to XXX](movie)
+    - i want to know to know the director of [army of the dead](movie)
+    - I want to know to know who directed [Gone Mom: The Disappearance of Jennifer Dulos](movie)
+    - i want to know to know the director of [trolls world tour](movie)
+    - The director of [Saint Seiya Heaven Chapter: Overture](movie)
+    - i want to know to know the director of [alien: covenant](movie)
+    - i want to know to know the director of [the virtuoso](movie)
+    - I want to know to know who directed [Revolution: Los Polinesios](movie)
+    - tell me the director of [cars 2](movie)
+    - i want to know to know who directed [avatar 2](movie)
+    - tell me the director of [jurassic world](movie)
+    - The director of [Pokémon the Movie: Secrets of the Jungle](movie)
+- intent: movie_writer
+  examples: |
+    - tell me the writer of [22 bullets](movie)
+    - The writer of [Wrong Turn 2: Dead End](movie)
+    - tell me the writers of [django unchained](movie)
+    - The writer of [Monsters University](movie)
+    - who are the writers of [x-men: apocalypse](movie)?
+    - who are the writers of [spiral: from the book of saw](movie)?
+    - tell me the writer of [shrek 2](movie)
+    - tell me the writers of [munich: the edge of war](movie)
+    - tell me the writers of [jurassic hunt](movie)
+    - i want to know the writers of [sing](movie)
+    - Tell me the writer of [Dragon Ball Z: Lord Slug](movie)
+    - the writer of [fifty shades of grey](movie)
+    - Tell me the writer of [Clean](movie)
+    - who wrote [zombieland](movie)?
+    - Tell me the writer of [Shrek 2](movie)
+    - Tell me the writer of [22 Bullets](movie)
+    - I want to know to know the writer of [Avengers: Infinity War](movie)
+    - I want to know the writers of [Hitman: Agent 47](movie)
+    - I want to know the writers of [The Conjuring](movie)
+    - The writer of [The Kissing Booth](movie)
+    - I want to know to know the writer of [Tom and Jerry: The Fast and the Furry](movie)
+    - The writer of [Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train](movie)
+    - I want to know the writers of [Godzilla: King of the Monsters](movie)
+    - Who are the writers of [Dinosaur Hotel](movie)?
+    - the writer of [wonder woman](movie)
+    - i want to know the writers of [attack on titan](movie)
+    - I want to know to know the writer of [Stand by Me Doraemon](movie)
+    - I want to know to know the writer of [Naruto Shippuden the Movie: Blood Prison](movie)
+    - who are the writers of [dinosaur hotel](movie)?
+    - tell me the writer of [clean](movie)
+    - tell me the writers of [confessions of a shopaholic](movie)
+    - tell me the writer of [dragon ball z: lord slug](movie)
+    - I want to know the writers of [13 Assassins](movie)
+    - who are the writers of [the island of giant insects](movie)?
+    - the writer of [naruto shippuden the movie: blood prison](movie)
+    - The writer of [Wonder Woman](movie)
+    - who are the writers of [ride your wave](movie)?
+    - i want to know to know the writer of [naruto shippuden the movie: blood prison](movie)
+    - The writer of [Wild Indian](movie)
+    - i want to know the writers of [hitman: agent 47](movie)
+    - Who are the writers of [Away](movie)?
+    - i want to know to know the writer of [voyagers](movie)
+    - tell me the writers of [parasite](movie)
+    - I want to know to know the writer of [The Hunger Games: Mockingjay - Part 1](movie)
+    - the writer of [the kissing booth](movie)
+    - Tell me the writer of [Jurassic Hunt](movie)
+    - The writer of [Last Shoot Out](movie)
+    - i want to know to know the writer of [black panther](movie)
+    - i want to know to know the writer of [a quiet place part ii](movie)
+    - i want to know the writers of [the maze runner](movie)
+    - i want to know the writers of [despicable me](movie)
+    - who are the writers of [come play with me](movie)?
+    - Who wrote [Sooryavanshi](movie)?
+    - i want to know the writers of [odd thomas](movie)
+    - Tell me the writer of [HK: Hentai Kamen 2 - Abnormal Crisis](movie)
+- intent: person_info
+  examples: |
+    - What can you tell me about [Brian Copeland](person)?
+    - Who is [David Kaye](person)?
+    - tell me about [lucia efstathiou](person)
+    - Who is [Matt Bellefleur](person)?
+    - What do you know about [Angourie Rice](person)?
+    - Tell me something about [Finn Wolfhard](person)
+    - tell me about [diego osorio](person)
+    - Tell me about [Mckenna Grace](person)
+    - What do you know about [Daniel Stisen](person)?
+    - who is [will verchere-gopaulsingh](person)?
+    - Who is [Reece Shearsmith](person)?
+    - Tell me about [Olumide Olorunfemi](person)
+    - Tell me about [Yuuhei Takagi](person)
+    - what can you tell me about [naomie harris](person)?
+    - tell me something about [robert mitchel owenby](person)
+    - tell me about [marisa tomei](person)
+    - Who is [Bobby Cannavale](person)?
+    - what do you know about [mitsuki nakae](person)?
+    - What can you tell me about [Tom Hardy](person)?
+    - what do you know about [jonathan sam](person)?
+    - tell me about [yuuhei takagi](person)
+    - what can you tell me about [lydia sarks](person)?
+    - who is [stephen thorne](person)?
+    - Who is [Nick Offerman](person)?
+    - tell me something about [angelina jolie](person)
+    - Tell me something about [Junya Enoki](person)
+    - what do you know about [avaah blackwell](person)?
+    - what can you tell me about [arian moayed](person)?
+    - tell me something about [j.k. simmons](person)
+    - what do you know about [brock morgan](person)?
+    - who is [brenda bazinet](person)?
+    - Who is [Alyssa Milano](person)?
+    - tell me something about [josh gad](person)
+    - what can you tell me about [brian copeland](person)?
+    - What do you know about [Nikki Bryce](person)?
+    - tell me about [brian copeland](person)
+    - who is [leanne lapp](person)?
+    - Who is [Adam Buxton](person)?
+    - who is [selena gomez](person)?
+    - Tell me about [Christian J. Mallen](person)
+    - who is [jose guns alves](person)?
+    - What can you tell me about [Nathan Dales](person)?
+    - Who is [Sian Webber](person)?
+    - what can you tell me about [kit harington](person)?
+    - Tell me something about [Stella Ye](person)
+    - tell me something about [eric andré](person)
+    - Tell me something about [Michael Le](person)
+    - tell me about [andrei maniata](person)
+    - Tell me about [Hibiku Yamamura](person)
+    - Tell me something about [Rikiya Koyama](person)
+    - what can you tell me about [meng'er zhang](person)?
+    - tell me something about [trace schurko](person)
+    - What can you tell me about [John Bucy](person)?
+    - tell me about [christian j. mallen](person)
+    - What do you know about [Tim Roth](person)?
+    - what do you know about [ed sheeran](person)?
+    - tell me something about [olga merediz](person)
+    - Who is [Brenda Bazinet](person)?
+    - Tell me about [Michael Q. Adams](person)
+    - tell me about [melvyn rawlinson](person)
+    - Tell me about [Ritu Arya](person)
+    - Tell me something about [Ed Moy](person)
+    - tell me about [juan castano](person)
+    - what can you tell me about [lex lang](person)?
+    - Tell me about [Fala Chen](person)
+    - What do you know about [Jessica Darrow](person)?
+    - Tell me something about [Florian Munteanu](person)
+    - what do you know about [tim roth](person)?
+    - tell me something about [chabris napier-lawrence](person)
+    - Tell me something about [Nathan Theis](person)
+    - Who is [Molly Shannon](person)?
+    - tell me about [raymond ma](person)
+    - what do you know about [jay karales](person)?
+    - Tell me something about [Louis j Rhone](person)
+    - tell me something about [michael le](person)
+    - Who is [Gonzalo Escudero](person)?
+    - tell me something about [dino kelly](person)
+    - who is [jon f. merz](person)?
+    - What can you tell me about [J.K. Simmons](person)?
+    - Tell me about [Yuichi Nakamura](person)
+    - tell me about [shinya takahashi](person)
+    - Who is [Olga Merediz](person)?
+    - tell me about [michael q. adams](person)
+    - tell me something about [jayden tianyi zhang](person)
+    - who is [lambert wilson](person)?
+    - what do you know about [arian moayed](person)?
+    - What can you tell me about [Darnell Appling](person)?
+    - who is [junya enoki](person)?
+    - Tell me something about [Misaki Kuno](person)
+    - Who is [Junya Enoki](person)?
+    - Who is [Sora Amamiya](person)?
+    - Tell me about [Rolando Fernandez](person)
+    - tell me about [ritu arya](person)
+    - What do you know about [Mark Ruffalo](person)?
+    - tell me about [fran drescher](person)

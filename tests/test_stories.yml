@@ -1,0 +1,175 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: movie provider + all_stars_movie + deny
+  steps:
+    - user: |
+        - Find where I can watch the godfather?
+      intent: movie_provider
+    - slot_was_set:
+      - last_question: "movie_provider"
+      - movie: "the godfather"
+    - action: action_movie_provider
+    - slot_was_set:
+      - last_question: "all_stars_movie"
+      - movie: "the godfather"
+    - user: |
+        - yeah
+      intent: affirm
+    - action: action_affirm
+    - action: action_all_stars_movie
+    - slot_was_set:
+      - last_question: "movie_plot"
+      - movie: "the godfather"
+    - user: |
+        - nah
+      intent: deny
+    - action: action_deny
+    - slot_was_set:
+      - last_question: ""
+      - movie: ""
+    - user: |
+        - see ya
+      intent: goodbye
+    - action: utter_goodbye
+
+- story: actors + plot + reviews + deny + person
+  steps:
+    - user: |
+        - helloooo
+      intent: greet
+    - action: utter_greet
+    - user: |
+        - Please tell me the actors in parasite
+    - intent: all_stars_movie
+    - slot_was_set:
+      - last_question: "all_stars_movie"
+      - movie: "Parasite"
+    - action: action_all_stars_movie
+    - slot_was_set:
+      - last_question: "movie_plot"
+      - movie: "Parasite"
+    - user: |
+        - no way
+      intent: deny
+    - action: action_deny
+    - slot_was_set:
+      - last_question: ""
+      - movie: ""
+    - user: |
+        - Tell me something about angelina jolie
+      intent: person_info
+    - action: action_all_stars_movie
+    - slot_was_set:
+      - last_question: "movie_provider"
+      - movie: "Maleficent"
+    - user: |
+        - What can u do?
+      intent: help
+    -action: utter_help
+
+- story: writer + provider
+  steps:
+    - user: |
+        - what can u do for me?
+      intent: help
+    - action: utter_help
+    - user: |
+        - Can you find who is the writer of pulp fiction?
+    - intent: movie_writer
+    - slot_was_set:
+      - last_question: "movie_writer"
+      - movie: "pulp fiction"
+    - action: action_movie_writer
+    - slot_was_set:
+      - last_question: "movie_provider"
+      - movie: "pulp fiction"
+    - user: |
+        - no thanks
+      intent: deny
+    - action: action_deny
+    - slot_was_set:
+      - last_question: ""
+      - movie: ""
+    - user: |
+        - goodbye
+      intent: goodbye
+    - action: utter_goodbye
+
+- story: all
+  steps:
+    - user: |
+        - hi
+      intent: greet
+    - action: utter_greet
+    - user: |
+        - Tell me the director of the pianist?
+      intent: movie_director
+    - slot_was_set:
+      - last_question: "movie_director"
+      - movie: "the pianist"
+    - action: action_movie_director
+    - slot_was_set:
+      - last_question: "movie_writer"
+      - movie: "the pianist"
+    - user: |
+        - yep
+      intent: affirm
+    - action: action_affirm
+    - slot_was_set:
+      - last_question: "movie_provider"
+      - movie: "the pianist"
+    - user: |
+      - ok
+      intent: affirm
+    - action: action_affirm
+    - slot_was_set:
+      - last_question: "all_stars_movie"
+      - movie: "the pianist"
+    - user: |
+      - yep
+      intent: affirm
+    - action: action_affirm
+    - slot_was_set:
+      - last_question: "movie_plot"
+      - movie: "the pianist"
+    - user: |
+      - yeah
+      intent: affirm
+    - action: action_affirm
+    - slot_was_set:
+      - last_question: "movie_reviews"
+      - movie: "the pianist"
+    - user: |
+      - yep
+      intent: affirm
+    - action: action_affirm
+    - slot_was_set:
+      - last_question: "movie_director"
+      - movie: "the pianist"
+    - user: |
+        - no thanks
+      intent: deny
+    - action: action_deny
+    - slot_was_set:
+      - last_question: ""
+      - movie: ""
+    - user: |
+        - goodbye
+      intent: goodbye
+    - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot

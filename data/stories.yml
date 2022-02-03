@@ -1,0 +1,603 @@
+version: "2.0"
+
+stories:
+  - story: goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie provider 1
+    steps:
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Eternals"
+      - action: action_movie_provider
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Eternals"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Eternals"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie provider 2
+    steps:
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Eternals"
+      - action: action_movie_provider
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Eternals"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie provider 3
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Need for Speed"
+      - action: action_movie_provider
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Need for Speed"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "An Egg Rescue"
+      - action: action_all_stars_movie
+
+  - story: movie provider 4
+    steps:
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Joker"
+      - action: action_movie_provider
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Joker"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Joker"
+
+  - story: actors in movie 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "The Scientist"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "The Scientist"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Don't Blame the Kid"
+      - action: action_movie_provider
+      - slot_was_set:
+          - last_question: "all_stars_movie"
+          - movie: "Don't Blame the Kid"
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: actors in movie 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "The Scientist"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "The Scientist"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: actors in movie 3
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Scream"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Scream"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "Scream"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: movie_provider
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Eternals"
+      - action: action_all_stars_movie
+
+  - story: actors in movie 4
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "incredibles 2"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "incredibles 2"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "incredibles 2"
+
+  - story: movie plot 1 + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_plot
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Wild Indian"
+      - action: action_movie_plot
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "Wild Indian"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Wild Indian"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+          - last_question: ""
+          - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie plot 2 + deny
+    steps:
+      - intent: movie_plot
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Robin Hood"
+      - action: action_movie_plot
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "Robin Hood"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Frozen"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Frozen"
+      - intent: affirm
+
+  - story: movie plot 3 + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "The Legend of Tarzan"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "The Legend of Tarzan"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "The Legend of Tarzan"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: movie_plot
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Star Trek"
+      - action: action_movie_plot
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "Star Trek"
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie reviews 1 + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_reviews
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "The Little Things"
+      - action: action_movie_reviews
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "The Little Things"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "The Little Things"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie reviews 2 + deny
+    steps:
+      - intent: movie_reviews
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "Baby Driver"
+      - action: action_movie_reviews
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Baby Driver"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Frozen"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Frozen"
+      - intent: affirm
+
+  - story: movie reviews 3 + affirm + previous action
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_plot
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "A Boy Called Christmas"
+      - action: action_movie_plot
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "A Boy Called Christmas"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "A Boy Called Christmas"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+          
+  - story: movie director 1 + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_director
+      - slot_was_set:
+        - last_question: "movie_director"
+        - movie: "Salt"
+      - action: action_movie_director
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "Salt"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Salt"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie director 2 + deny
+    steps:
+      - intent: movie_director
+      - slot_was_set:
+        - last_question: "movie_director"
+        - movie: "Gold"
+      - action: action_movie_director
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "Gold"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Frozen"
+      - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Frozen"
+      - intent: affirm
+
+  - story: movie director 3 + affirm + previous action
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_reviews
+      - slot_was_set:
+        - last_question: "movie_reviews"
+        - movie: "A Boy Called Christmas"
+      - action: action_movie_reviews
+      - slot_was_set:
+        - last_question: "movie_director"
+        - movie: "A Boy Called Christmas"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "A Boy Called Christmas"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie writer 1 + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_writer
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "Salt"
+      - action: action_movie_writer
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Salt"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Salt"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: movie writer 2 + deny
+    steps:
+      - intent: movie_writer
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "Gold"
+      - action: action_movie_writer
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Gold"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "Frozen"
+      - action: action_movie_writer
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Frozen"
+      - intent: affirm
+
+  - story: movie writer 3 + affirm + previous action
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_director
+      - slot_was_set:
+        - last_question: "movie_director"
+        - movie: "A Boy Called Christmas"
+      - action: action_movie_director
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "A Boy Called Christmas"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "A Boy Called Christmas"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: person info 1 + knownfor + affirm
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: person_info
+      - action: action_person_info
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Arrival"
+      - intent: affirm
+      - action: action_affirm
+      - slot_was_set:
+        - last_question: "all_stars_movie"
+        - movie: "Arrival"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: person info 2 + deny
+    steps:
+      - intent: person_info
+      - action: action_person_info
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Gold"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: person_info
+      - action: action_person_info
+      - intent: movie_plot
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Wild Indian"
+      - action: action_movie_plot
+      - slot_was_set:
+          - last_question: "movie_reviews"
+          - movie: "Wild Indian"
+      - intent: affirm
+
+  - story: person info 3 + affirm + previous action
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: movie_director
+      - slot_was_set:
+        - last_question: "movie_director"
+        - movie: "A Boy Called Christmas"
+      - action: action_movie_director
+      - slot_was_set:
+        - last_question: "movie_writer"
+        - movie: "A Boy Called Christmas"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: person_info
+      - action: action_person_info
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Gold"
+      - intent: deny
+      - action: action_deny
+      - slot_was_set:
+        - last_question: ""
+        - movie: ""
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: out-of-scope
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - story: help 1 + thanks
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: help
+      - action: utter_help
+
+  - story: help 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: person_info
+      - action: action_person_info
+      - slot_was_set:
+        - last_question: "movie_provider"
+        - movie: "Gold"
+      - intent: help
+      - action: utter_help
+      - intent: thanks
+      - action: utter_movie
+
+  - story: help 3
+    steps:
+      - intent: help
+      - action: utter_help
+      - intent: person_info
+      - action: action_person_info
+
