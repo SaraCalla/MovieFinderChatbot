@@ -95,7 +95,9 @@ class ActionAffirm(Action):
                 res = "action_movie_writer"
                 events.append(FollowupAction(res))
             else:
-                botResponse = ERROR_MESSAGE
+                botResponse = (
+                    "Mmm.. Sorry I couldn't understand your question. Can you repeat?"
+                )
                 dispatcher.utter_message(text=botResponse)
         except Exception as ex:
             botResponse = ERROR_MESSAGE

@@ -11,9 +11,6 @@ stories:
   - story: movie provider 1
     steps:
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "movie_provider"
-        - movie: "Eternals"
       - action: action_movie_provider
       - slot_was_set:
         - last_question: "all_stars_movie"
@@ -34,9 +31,6 @@ stories:
   - story: movie provider 2
     steps:
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "movie_provider"
-        - movie: "Eternals"
       - action: action_movie_provider
       - slot_was_set:
         - last_question: "all_stars_movie"
@@ -54,9 +48,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "movie_provider"
-        - movie: "Need for Speed"
       - action: action_movie_provider
       - slot_was_set:
         - last_question: "all_stars_movie"
@@ -67,17 +58,14 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: all_stars_movie
+      - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "all_stars_movie"
         - movie: "An Egg Rescue"
-      - action: action_all_stars_movie
 
   - story: movie provider 4
     steps:
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "movie_provider"
-        - movie: "Joker"
       - action: action_movie_provider
       - slot_was_set:
         - last_question: "all_stars_movie"
@@ -93,9 +81,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "The Scientist"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -106,9 +91,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "movie_provider"
-        - movie: "Don't Blame the Kid"
       - action: action_movie_provider
       - slot_was_set:
           - last_question: "all_stars_movie"
@@ -121,9 +103,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "The Scientist"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -141,9 +120,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "Scream"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -159,19 +135,16 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: movie_provider
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "Eternals"
       - action: action_all_stars_movie
+      - slot_was_set:
+        - last_question: "movie_plot"
+        - movie: "Eternals"
 
   - story: actors in movie 4
     steps:
       - intent: greet
       - action: utter_greet
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "incredibles 2"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -187,9 +160,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_plot
-      - slot_was_set:
-        - last_question: "movie_plot"
-        - movie: "Wild Indian"
       - action: action_movie_plot
       - slot_was_set:
         - last_question: "movie_reviews"
@@ -210,9 +180,6 @@ stories:
   - story: movie plot 2 + deny
     steps:
       - intent: movie_plot
-      - slot_was_set:
-        - last_question: "movie_plot"
-        - movie: "Robin Hood"
       - action: action_movie_plot
       - slot_was_set:
         - last_question: "movie_reviews"
@@ -223,9 +190,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "Frozen"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -237,9 +201,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "The Legend of Tarzan"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -255,9 +216,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: movie_plot
-      - slot_was_set:
-        - last_question: "movie_plot"
-        - movie: "Star Trek"
       - action: action_movie_plot
       - slot_was_set:
         - last_question: "movie_reviews"
@@ -270,9 +228,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_reviews
-      - slot_was_set:
-        - last_question: "movie_reviews"
-        - movie: "The Little Things"
       - action: action_movie_reviews
       - slot_was_set:
         - last_question: "movie_provider"
@@ -293,9 +248,6 @@ stories:
   - story: movie reviews 2 + deny
     steps:
       - intent: movie_reviews
-      - slot_was_set:
-        - last_question: "movie_reviews"
-        - movie: "Baby Driver"
       - action: action_movie_reviews
       - slot_was_set:
         - last_question: "movie_provider"
@@ -306,9 +258,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "Frozen"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -320,9 +269,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_plot
-      - slot_was_set:
-        - last_question: "movie_plot"
-        - movie: "A Boy Called Christmas"
       - action: action_movie_plot
       - slot_was_set:
         - last_question: "movie_reviews"
@@ -345,9 +291,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_director
-      - slot_was_set:
-        - last_question: "movie_director"
-        - movie: "Salt"
       - action: action_movie_director
       - slot_was_set:
         - last_question: "movie_writer"
@@ -368,9 +311,6 @@ stories:
   - story: movie director 2 + deny
     steps:
       - intent: movie_director
-      - slot_was_set:
-        - last_question: "movie_director"
-        - movie: "Gold"
       - action: action_movie_director
       - slot_was_set:
         - last_question: "movie_writer"
@@ -381,9 +321,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "all_stars_movie"
-        - movie: "Frozen"
       - action: action_all_stars_movie
       - slot_was_set:
         - last_question: "movie_plot"
@@ -395,9 +332,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_reviews
-      - slot_was_set:
-        - last_question: "movie_reviews"
-        - movie: "A Boy Called Christmas"
       - action: action_movie_reviews
       - slot_was_set:
         - last_question: "movie_director"
@@ -420,9 +354,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_writer
-      - slot_was_set:
-        - last_question: "movie_writer"
-        - movie: "Salt"
       - action: action_movie_writer
       - slot_was_set:
         - last_question: "movie_provider"
@@ -443,9 +374,6 @@ stories:
   - story: movie writer 2 + deny
     steps:
       - intent: movie_writer
-      - slot_was_set:
-        - last_question: "movie_writer"
-        - movie: "Gold"
       - action: action_movie_writer
       - slot_was_set:
         - last_question: "movie_provider"
@@ -456,9 +384,6 @@ stories:
         - last_question: ""
         - movie: ""
       - intent: all_stars_movie
-      - slot_was_set:
-        - last_question: "movie_writer"
-        - movie: "Frozen"
       - action: action_movie_writer
       - slot_was_set:
         - last_question: "movie_provider"
@@ -470,9 +395,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_director
-      - slot_was_set:
-        - last_question: "movie_director"
-        - movie: "A Boy Called Christmas"
       - action: action_movie_director
       - slot_was_set:
         - last_question: "movie_writer"
@@ -527,9 +449,6 @@ stories:
       - intent: person_info
       - action: action_person_info
       - intent: movie_plot
-      - slot_was_set:
-        - last_question: "movie_plot"
-        - movie: "Wild Indian"
       - action: action_movie_plot
       - slot_was_set:
           - last_question: "movie_reviews"
@@ -541,9 +460,6 @@ stories:
       - intent: greet
       - action: utter_greet
       - intent: movie_director
-      - slot_was_set:
-        - last_question: "movie_director"
-        - movie: "A Boy Called Christmas"
       - action: action_movie_director
       - slot_was_set:
         - last_question: "movie_writer"

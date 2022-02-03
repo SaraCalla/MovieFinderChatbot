@@ -1,38 +1,34 @@
 {
-  "person": {
-    "precision": 0.9896800825593395,
-    "recall": 0.9686868686868687,
-    "f1-score": 0.9790709545686574,
-    "support": 990,
-    "confused_with": {
-      "movie": 23
-    }
-  },
   "movie": {
-    "precision": 0.9914122137404581,
-    "recall": 0.9961649089165868,
-    "f1-score": 0.9937828790052606,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 4172,
-    "confused_with": {
-      "person": 9
-    }
+    "confused_with": {}
+  },
+  "person": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 990,
+    "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.9910869986436737,
-    "recall": 0.9908950019372337,
-    "f1-score": 0.9909909909909911,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 5162
   },
   "macro avg": {
-    "precision": 0.9905461481498987,
-    "recall": 0.9824258888017278,
-    "f1-score": 0.986426916786959,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 5162
   },
   "weighted avg": {
-    "precision": 0.9910800150056058,
-    "recall": 0.9908950019372337,
-    "f1-score": 0.9909613359614332,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 5162
   }
 }

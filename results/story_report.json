@@ -1,0 +1,212 @@
+{
+  "": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "action_movie_director": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13
+  },
+  "None": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 141
+  },
+  "movie_reviews": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11
+  },
+  "action_listen": {
+    "precision": 0.9941176470588236,
+    "recall": 1.0,
+    "f1-score": 0.9970501474926253,
+    "support": 169
+  },
+  "action_movie_provider": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12
+  },
+  "action_movie_writer": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12
+  },
+  "action_movie_plot": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11
+  },
+  "movie_director": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12
+  },
+  "movie_provider": {
+    "precision": 0.5714285714285714,
+    "recall": 1.0,
+    "f1-score": 0.7272727272727273,
+    "support": 12
+  },
+  "action_deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 0.24242424242424243,
+    "f1-score": 0.3902439024390244,
+    "support": 33
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15
+  },
+  "movie_plot": {
+    "precision": 0.5555555555555556,
+    "recall": 0.45454545454545453,
+    "f1-score": 0.5,
+    "support": 11
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6
+  },
+  "person_info": {
+    "precision": 0.5714285714285714,
+    "recall": 1.0,
+    "f1-score": 0.7272727272727273,
+    "support": 12
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13
+  },
+  "help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "action_person_info": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11
+  },
+  "action_all_stars_movie": {
+    "precision": 1.0,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.923076923076923,
+    "support": 14
+  },
+  "utter_goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15
+  },
+  "utter_help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "movie_writer": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 12
+  },
+  "all_stars_movie": {
+    "precision": 0.9090909090909091,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8695652173913043,
+    "support": 12
+  },
+  "action_affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "utter_out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 33
+  },
+  "action_movie_reviews": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11
+  },
+  "utter_iamabot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "micro avg": {
+    "precision": 0.9434343434343434,
+    "recall": 0.7217928902627512,
+    "f1-score": 0.8178633975481612,
+    "support": 647
+  },
+  "macro avg": {
+    "precision": 0.8481321756464071,
+    "recall": 0.8458315877670716,
+    "f1-score": 0.8348288050120657,
+    "support": 647
+  },
+  "weighted avg": {
+    "precision": 0.7452747311279906,
+    "recall": 0.7217928902627512,
+    "f1-score": 0.7191141815848494,
+    "support": 647
+  },
+  "conversation_accuracy": {
+    "accuracy": 0.058823529411764705,
+    "correct": 1,
+    "with_warnings": 0,
+    "total": 17
+  }
+}

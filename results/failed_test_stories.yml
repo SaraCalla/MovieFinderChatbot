@@ -1,0 +1,915 @@
+version: "2.0"
+stories:
+- story: all 3 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: all_stars_movie  # predicted: person_info: Who played in [Interstellar](person)?
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: person_info: May I know what is the [movie](person) [Interstellar](person) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: out_of_scope  # predicted: bot_status: Can you bring me to [Trento](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Interstellar
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 4 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: movie_provider: Where is [your](movie) [happy place](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Psycho
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Psycho
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Psycho
+  - intent: out_of_scope  # predicted: bot_status: When did you feel safest?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Psycho
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Psycho
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Psycho
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Psycho
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 5 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: movie_provider: Where is [your](movie) [happy place](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: out_of_scope  # predicted: movie_plot: What is your [nickname](person)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: out_of_scope  # predicted: bot_status: Can you bring me to [Trento](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: The Lion King
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 6 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: out_of_scope  # predicted: movie_provider: Where is [your](movie) [happy place](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Whiplash
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 7 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: City lights
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: City lights
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: City lights
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: City lights
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: City lights
+  - intent: out_of_scope  # predicted: movie_writer: What is [your favorite color](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: City lights
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: City lights
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 8 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: out_of_scope  # predicted: bot_status: Can you bring me to [Trento](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: movie_provider: Can you find [what does this movie talk](movie) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: out_of_scope  # predicted: bot_status: When did you feel safest?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: The Prestige
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 9 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: out_of_scope  # predicted: movie_plot: What is your [nickname](person)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: movie_provider: Can you find [what does this movie talk](movie) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: out_of_scope  # predicted: bot_status: When did you feel safest?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Casablanca
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 10 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Alien
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Alien
+  - intent: all_stars_movie  # predicted: person_info: Do you know who played in [Alien](movie)?
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Alien
+  - intent: out_of_scope  # predicted: movie_provider: Where is [your](movie) [happy place](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: movie_provider: Can you find [what does this movie talk](movie) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Alien
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Alien
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Alien
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Alien
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: movie provider + all_stars_movie + deny (./tests/test_stories.yml)
+  steps:
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: the godfather
+  - intent: affirm
+  - action: action_affirm
+  - action: action_all_stars_movie  # predicted: action_listen
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: the godfather
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: actors + plot + reviews + deny + person (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - user: |-
+      Please tell me the actors in parasite
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Parasite
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_all_stars_movie  # predicted: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Maleficent
+  - intent: help
+  - action: utter_help
+- story: writer + provider (./tests/test_stories.yml)
+  steps:
+  - intent: help
+  - action: utter_help
+  - user: |-
+      Can you find who is the writer of pulp fiction?
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: pulp fiction
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: the pianist
+  - intent: affirm
+  - action: action_affirm
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: the pianist
+  - intent: affirm  # predicted: nlu_fallback: ok
+  - action: action_affirm
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: the pianist
+  - intent: affirm
+  - action: action_affirm
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: the pianist
+  - intent: affirm
+  - action: action_affirm
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: the pianist
+  - intent: affirm
+  - action: action_affirm
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: the pianist
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: bot challenge (./tests/test_stories.yml)
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot  # predicted: action_movie_plot
+- story: all 0 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Encanto
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Encanto
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Encanto
+  - intent: out_of_scope  # predicted: bot_status: Can you bring me to [Trento](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: movie_provider: Can you find [what does this movie talk](movie) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Encanto
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Encanto
+  - intent: out_of_scope  # predicted: movie_plot: What is your [nickname](person)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Encanto
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Encanto
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 1 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope  # predicted: person_info: What four [words best describe you](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: out_of_scope  # predicted: bot_status: When did you feel safest?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: out_of_scope  # predicted: bot_status: When did you feel safest?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Fight Club
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
+- story: all 2 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: person_info
+  - action: action_person_info
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Inception
+  - intent: movie_provider
+  - action: action_movie_provider
+  - slot_was_set:
+    - last_question: all_stars_movie
+  - slot_was_set:
+    - movie: Inception
+  - intent: all_stars_movie
+  - action: action_all_stars_movie
+  - slot_was_set:
+    - last_question: movie_plot
+  - slot_was_set:
+    - movie: Inception
+  - intent: out_of_scope  # predicted: movie_plot: What is your [nickname](person)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_plot  # predicted: movie_provider: Can you find [what does this movie talk](movie) about?
+  - action: action_movie_plot
+  - slot_was_set:
+    - last_question: movie_reviews
+  - slot_was_set:
+    - movie: Inception
+  - intent: movie_reviews
+  - action: action_movie_reviews
+  - slot_was_set:
+    - last_question: movie_director
+  - slot_was_set:
+    - movie: Inception
+  - intent: out_of_scope  # predicted: bot_status: Can you bring me to [Trento](movie)?
+  - action: utter_out_of_scope
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: movie_director
+  - action: action_movie_director
+  - slot_was_set:
+    - last_question: movie_writer
+  - slot_was_set:
+    - movie: Inception
+  - intent: movie_writer
+  - action: action_movie_writer
+  - slot_was_set:
+    - last_question: movie_provider
+  - slot_was_set:
+    - movie: Inception
+  - intent: deny
+  - action: action_deny
+  - slot_was_set:
+    - last_question: ''
+  - slot_was_set:
+    - movie: ''
+  - intent: goodbye
+  - action: utter_goodbye
