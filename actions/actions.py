@@ -14,7 +14,6 @@ from env import TMDB_APIKEY, IMDB_APIKEY
 from helper.tmdb import Tmdb
 from helper.imdb import Imdb
 
-
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer as Summarizer
@@ -165,9 +164,9 @@ class ActionMovieProviders(Action):
             if flatrate_movie_providers or rent_movie_providers:
                 if flatrate_movie_providers and rent_movie_providers:
                     botResponse = f"Let me check... You can watch {movie_name} for free if you are subscribed on {get_printable_set(flatrate_movie_providers)}. Or you can rent it on {get_printable_set(rent_movie_providers)}"
-                elif flatrate_movie_providers and rent_movie_providers is None:
+                elif flatrate_movie_providers and len(rent_movie_providers) == 0:
                     botResponse = f"Let me check... You can watch {movie_name} for free if you are subscribed on {get_printable_set(flatrate_movie_providers)}."
-                elif rent_movie_providers and flatrate_movie_providers is None:
+                elif rent_movie_providers and len(flatrate_movie_providers) == 0:
                     botResponse = f"Let me check... You can watch {movie_name} by renting it on {get_printable_set(rent_movie_providers)}"
                 else:
                     botResponse = f"Oh! I couldn't find any provider for {movie_name}."
