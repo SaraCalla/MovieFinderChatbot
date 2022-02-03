@@ -33,33 +33,6 @@ def get_printable_set(items: Set[str]) -> str:
     return get_printable_list(list(items))
 
 
-# class ActionUserProvider(Action):
-#     def name(self) -> Text:
-#         return "action_user_providers"
-#
-#     def run(
-#         self,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: Dict[Text, Any],
-#     ) -> List[Dict[Text, Any]]:
-#
-#         print("I'm in action_user_providers")
-#
-#         providers_raw = set(tracker.get_latest_entity_values("provider"))
-#         print(f"Sono in providers: {providers_raw}")
-#
-#         if providers_raw is not None:
-#             print(f"Providers: {providers_raw}")
-#             botResponse = f"Thanks! So your providers are: {get_printable_set(providers_raw)}. Right?"
-#
-#         else:
-#             botResponse = ERROR_MESSAGE
-#         dispatcher.utter_message(text=botResponse)
-#
-#         return []
-
-
 class ActionAffirm(Action):
     def name(self) -> Text:
         return "action_affirm"
@@ -72,7 +45,6 @@ class ActionAffirm(Action):
     ) -> List[Dict[Text, Any]]:
         events = []
         try:
-            print("I'm in action_affirm")
             last_question = tracker.get_slot("last_question")
 
             if last_question == "movie_provider":
@@ -115,7 +87,6 @@ class ActionDeny(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        print("I'm in action_deny")
         botResponse = "What else can I do for you?"
         dispatcher.utter_message(text=botResponse)
 
@@ -135,8 +106,6 @@ class ActionMovieProviders(Action):
 
         events = []
 
-        print("I'm in action_movie_provider")
-
         movie_slot = tracker.get_slot("movie")
 
         just_watch = JustWatch(country="IT")
@@ -147,7 +116,6 @@ class ActionMovieProviders(Action):
         if movie_name is None and movie_raw is not None:
             movie_name = string.capwords(movie_raw)
 
-        print(f"Movie name: {movie_name}")
         if movie_name:
             result = just_watch.search_for_item(query=movie_name)["items"][0]
             movie_name = result["title"]
@@ -177,10 +145,8 @@ class ActionMovieProviders(Action):
                 SlotSet("last_question", "all_stars_movie"),
                 SlotSet("movie", movie_name),
             ]
-            print(f"events in action_movie_provider: {events}")
         else:
             botResponse = ERROR_MESSAGE
-            print(f"Movie name: {movie_name}")
             events += [SlotSet("last_question", ""), SlotSet("movie", "")]
 
         dispatcher.utter_message(text=botResponse)
@@ -199,7 +165,6 @@ class ActionAllStarsMovie(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        print("I'm in action_all_stars_movie")
         events = []
         movie_slot = tracker.get_slot("movie")
         movie_name = movie_slot
@@ -207,8 +172,6 @@ class ActionAllStarsMovie(Action):
 
         if movie_name is None and movie_raw is not None:
             movie_name = string.capwords(movie_raw)
-
-        print(f"Movie name: {movie_name}")
 
         if movie_name:
             tmdb = Tmdb(TMDB_APIKEY)
@@ -234,12 +197,9 @@ class ActionAllStarsMovie(Action):
                     SlotSet("last_question", "movie_plot"),
                     SlotSet("movie", movie_name),
                 ]
-                print(f"events in action_all_stars_movie: {events}")
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
-                print(f"Exception: {movie_name}")
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
-                # print(ex)
         else:
             botResponse = ERROR_MESSAGE
             events += [SlotSet("last_question", ""), SlotSet("movie", "")]
@@ -260,7 +220,6 @@ class ActionDirector(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        print("I'm in action_movie_director")
         events = []
         movie_slot = tracker.get_slot("movie")
         movie_name = movie_slot
@@ -271,7 +230,6 @@ class ActionDirector(Action):
             movie_name = string.capwords(movie_raw)
 
         if movie_name:
-            print(f"movie_name: {movie_name}")
             tmdb = Tmdb(TMDB_APIKEY)
             try:
                 search_response = tmdb.search_movie(movie_name)
@@ -279,7 +237,6 @@ class ActionDirector(Action):
                 if len(search_response["results"]) > 0:
                     movie = search_response["results"][0]
                     movie_name = movie["title"]
-                    print(f"movie: {movie}")
                     crew_list = tmdb.movie_credits(movie["id"])["crew"]
                     directors += [
                         person["name"]
@@ -297,10 +254,8 @@ class ActionDirector(Action):
                     SlotSet("last_question", "movie_writer"),
                     SlotSet("movie", movie_name),
                 ]
-                print(f"events in action_movie_director: {events}")
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
-                print(f"Exception: {movie_name}")
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
 
         else:
@@ -323,7 +278,6 @@ class ActionWriters(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        print("I'm in action_movie_writer")
         events = []
         movie_slot = tracker.get_slot("movie")
         movie_name = movie_slot
@@ -331,8 +285,6 @@ class ActionWriters(Action):
 
         if movie_name is None and movie_raw is not None:
             movie_name = string.capwords(movie_raw)
-
-        print(f"Movie name: {movie_name}")
 
         if movie_name:
             tmdb = Tmdb(TMDB_APIKEY)
@@ -375,15 +327,11 @@ class ActionWriters(Action):
                     SlotSet("last_question", "movie_provider"),
                     SlotSet("movie", movie_name),
                 ]
-                print(f"events in action_movie_writer: {events}")
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
-                print(f"Exception: {movie_name}")
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
-                # print(ex)
         else:
             botResponse = ERROR_MESSAGE
-            print(f"{movie_name}")
             events += [SlotSet("last_question", ""), SlotSet("movie", "")]
 
         dispatcher.utter_message(text=botResponse)
@@ -402,12 +350,9 @@ class ActionPersonInfo(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        print("I'm in action_person_info")
-
         events = []
         relevant_roles = {"Producer", "Director", "Art Director", "Writer"}
         person_raw = next(tracker.get_latest_entity_values("person"), None)
-        print(person_raw)
 
         if person_raw:
             person_name = string.capwords(person_raw)
@@ -418,7 +363,6 @@ class ActionPersonInfo(Action):
                     person = search_response["results"][0]
                     person_id = person["id"]
                     person_details = tmdb.person_details(person_id)
-                    print(person_details["name"])
                     roles = (
                         {"Actor"}
                         if tmdb.person_movie_credits(person_id)["cast"]
@@ -449,7 +393,6 @@ class ActionPersonInfo(Action):
                             SlotSet("last_question", "movie_provider"),
                             SlotSet("movie", movie_name),
                         ]
-                        print(f"events in action_movie_writer: {events}")
                     elif person_details["birthday"]:
                         birthday_datetime = datetime.fromisoformat(
                             person_details["birthday"]
@@ -462,7 +405,6 @@ class ActionPersonInfo(Action):
                     events += [SlotSet("last_question", ""), SlotSet("movie", "")]
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
-                print(f"Exception: {person_name}")
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
         else:
             botResponse = ERROR_MESSAGE
@@ -491,10 +433,7 @@ class ActionPlot(Action):
         if movie_name is None and movie_raw is not None:
             movie_name = string.capwords(movie_raw)
 
-        print(f"Movie name: {movie_name}")
-
         if movie_name:
-            print("I'm in action_movie_plot")
             tmdb = Tmdb(TMDB_APIKEY)
             try:
                 search_response = tmdb.search_movie(movie_name)
@@ -503,9 +442,7 @@ class ActionPlot(Action):
                     movie_obj = tmdb.search_movie(movie_name)["results"][0]
                     movie_name = movie_obj["title"]
                     plot = movie_obj["overview"]
-                    print("here")
                     if plot:
-                        print("here2")
                         n_phrases = 2
                         parser = PlaintextParser.from_string(plot, Tokenizer("english"))
                         stemmer = Stemmer("english")
@@ -523,10 +460,8 @@ class ActionPlot(Action):
                             SlotSet("last_question", "movie_reviews"),
                             SlotSet("movie", movie_name),
                         ]
-                        print(f"events in action_movie_plot: {events}")
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
-                print(f"Exception: {movie_name}")
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
         else:
             botResponse = ERROR_MESSAGE
@@ -568,8 +503,6 @@ class ActionMovieReviews(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        print("I'm in action_movie_reviews")
-
         events = []
         movie_slot = tracker.get_slot("movie")
         movie_name = movie_slot
@@ -577,8 +510,6 @@ class ActionMovieReviews(Action):
 
         if movie_name is None and movie_raw is not None:
             movie_name = string.capwords(movie_raw)
-
-        print(f"Movie name: {movie_name}")
 
         if movie_name:
             tmdb = Tmdb(TMDB_APIKEY)
@@ -601,13 +532,11 @@ class ActionMovieReviews(Action):
                         raw_ratings = imdb.movie_ratings(imdb_movie_id)
                         ratings = []
                         raters = []
-                        print("here")
                         for rater, rater_data in self.RATERS_DATA.items():
                             rating = raw_ratings[rater]
                             if rating:
                                 ratings.append(rater_data["normalizer"](float(rating)))
                                 raters.append(rater_data["name"])
-                        print("Here 2")
 
                         botResponse = f"Ok. {movie_name} is rated on TMDB with {tmdb_vote_average}."
                         if ratings:
@@ -634,12 +563,9 @@ class ActionMovieReviews(Action):
                     SlotSet("last_question", "movie_director"),
                     SlotSet("movie", movie_name),
                 ]
-                print(f"events in action_movie_reviews: {events}")
             except Exception as ex:
                 botResponse = ERROR_MESSAGE
                 events += [SlotSet("last_question", ""), SlotSet("movie", "")]
-                print(f"Exception: {movie_name}")
-                print(ex)
         else:
             botResponse = ERROR_MESSAGE
             events += [SlotSet("last_question", ""), SlotSet("movie", "")]

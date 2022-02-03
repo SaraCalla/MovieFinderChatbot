@@ -61,7 +61,6 @@ actions:
   - action_movie_plot
   - action_movie_reviews
   - action_person_info
-#  - action_user_providers
   - action_affirm
   - action_deny
 

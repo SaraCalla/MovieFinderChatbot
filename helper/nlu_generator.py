@@ -22,24 +22,6 @@ providers_monetization = {
     if "flatrate" in p["monetization_types"]
 }
 
-# providers_monetization = {
-#     "Netflix",
-#     "Disney Plus",
-#     "Infinity",
-#     "Prime Video",
-#     "Apple TV Plus",
-#     "Timvision",
-#     "Now TV",
-#     "Hulu",
-# }
-#
-# out.write("- lookup: providers\n")
-# out.write("  examples: |\n")
-# for provider in providers_monetization:
-#     out.write(f"    - {provider}\n")
-# out.write("\n")
-
-# print the static part of file nly.yml
 for line in static_nlu:
     out.write(line)
 
@@ -81,12 +63,4 @@ for intent, sentences in INTENTS_TEMPLATE.items():
                 q = question.format(person=random.choice(people))
                 out.write(f"    - {q}\n")
                 out.write(f"    - {q.lower()}\n")
-            # elif intent in {"user_providers"}:
-            #     q = question.format(
-            #         provider1=random.choice(list(providers_monetization)),
-            #         provider2=random.choice(list(providers_monetization)),
-            #         provider3=random.choice(list(providers_monetization)),
-            #     )
-            #     out.write(f"    - {q}\n")
-            #     out.write(f"    - {q.lower()}\n")
     out.write("\n")

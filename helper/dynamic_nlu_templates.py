@@ -50,13 +50,4 @@ INTENTS_TEMPLATE = {
         "What are the [{movie}](movie) reviews?",
         "Tell me how [{movie}](movie) is reviewed",
     ],
-    # "user_providers": [
-    #     "I have [{provider1}](provider) [{provider2}](provider) and [{provider3}](provider)",
-    #     "[{provider1}](provider) [{provider2}](provider) and  [{provider3}](provider)",
-    #     "[{provider1}](provider) and [{provider2}](provider)",
-    #     "[{provider1}](provider)",
-    #     "I watch movies on [{provider1}](provider) and [{provider2}](provider)",
-    #     "What I use are [{provider1}](provider) [{provider2}](provider) and [{provider3}](provider)",
-    #     "I am subscribed to [{provider1}](provider)",
-    # ],
 }
